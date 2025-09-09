@@ -1,0 +1,26 @@
+# Copyright (C) 2025  Brenno Flávio de Almeida
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+#
+# contactbridge is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+[Unit]
+Description=Contact Bridge Sync Service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/click.ubuntu.com/contactbridge.brennoflavio/current/src/background_sync.py
+WorkingDirectory=/opt/click.ubuntu.com/contactbridge.brennoflavio/current
+Environment="PYTHONPATH=/opt/click.ubuntu.com/contactbridge.brennoflavio/current:$PYTHONPATH"
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,19 @@
+{
+    "name": "contactbridge.brennoflavio",
+    "description": "Sync your Address Books with your Nextcloud (or any CardDAV) server",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Contact Bridge",
+    "hooks": {
+        "contactbridge": {
+            "apparmor": "contactbridge.apparmor",
+            "desktop":  "contactbridge.desktop"
+        },
+        "push": {
+            "apparmor": "push.apparmor",
+            "push-helper": "push.json"
+        }
+    },
+    "version": "@BUILD_VERSION@",
+    "maintainer": "Brenno Flávio de Almeida <contato@brennoflavio.com.br>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

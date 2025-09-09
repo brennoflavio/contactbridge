@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=Contact Bridge
+Exec=qmlscene %U qml/Main.qml
+Icon=assets/logo.png
+Terminal=false
+Type=Application
+X-Lomiri-Touch=true

@@ -1,0 +1,81 @@
+name: contactbridge
+version: 0.1
+base: core24
+summary: Contact Bridge
+description: Sync your Address Books with your Nextcloud (or any CardDAV) server
+confinement: strict
+grade: stable
+
+platforms:
+  amd64:
+  arm64:
+  armhf:
+
+apps:
+  contactbridge:
+    desktop: contactbridge.desktop
+
+    command: usr/lib/qt5/bin/qmlscene $SNAP/qml/Main.qml
+
+    command-chain:
+      - bin/gpu-2404-wrapper
+      - bin/lomiri-launch
+    plugs:
+      - opengl
+      - wayland
+
+plugs:
+  lomiri-ui-toolkit:
+    interface: content
+    target: $SNAP/lomiri-ui-toolkit
+    default-provider: lomiri-ui-toolkit-core24
+  gpu-2404:
+    interface: content
+    target: $SNAP/gpu-2404
+    default-provider: mesa-2404
+
+layout:
+  /usr/share/X11/xkb:
+    symlink: $SNAP/lomiri-ui-toolkit/usr/share/X11/xkb
+  /usr/share/icons:
+    bind: $SNAP/lomiri-ui-toolkit/usr/share/icons
+  /usr/share/sounds:
+    bind: $SNAP/usr/share/sounds
+
+parts:
+  main:
+
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/
+
+    source: .
+    build-snaps:
+      - lomiri-ui-toolkit-core24
+    build-packages:
+      - qtbase5-dev
+      - qtbase5-dev-tools
+      - qtdeclarative5-dev
+      - qtquickcontrols2-5-dev
+      - intltool
+
+    stage-packages:
+      - qmlscene
+      - python3.12
+      - qml-module-io-thp-pyotherside
+
+    override-prime: |
+        craftctl default
+        mkdir -p ${CRAFT_PRIME}/bin
+        cp -a /snap/lomiri-ui-toolkit-core24/current/command-chain/lomiri-launch ${CRAFT_PRIME}/bin/lomiri-launch
+
+  gpu-2404:
+    after:
+      - main
+    source: https://github.com/canonical/gpu-snap.git
+    plugin: dump
+    override-prime: |
+      craftctl default
+      ${CRAFT_PART_SRC}/bin/gpu-2404-cleanup mesa-2404
+    prime:
+      - bin/gpu-2404-wrapper

@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+import sys
+
+out = sys.argv[2]
+in_, out = sys.argv[1:3]
+
+with open(in_) as f1, open(out, "w") as f2:
+    f2.write(f1.read())
