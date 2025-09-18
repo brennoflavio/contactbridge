@@ -70,6 +70,9 @@ install(FILES pushexec PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ DESTINAT
 install(FILES push.json DESTINATION ${DATA_DIR})
 install(FILES push.apparmor DESTINATION ${DATA_DIR})
 
+# Accounts
+install(FILES contactbridge.accounts DESTINATION ${DATA_DIR})
+
 # Translations
 file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml qml/*.js)
 list(APPEND I18N_SRC_FILES ${DESKTOP_FILE_NAME}.in.h)

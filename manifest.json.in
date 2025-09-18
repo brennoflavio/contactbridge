@@ -6,7 +6,8 @@
     "hooks": {
         "contactbridge": {
             "apparmor": "contactbridge.apparmor",
-            "desktop":  "contactbridge.desktop"
+            "desktop":  "contactbridge.desktop",
+            "accounts": "contactbridge.accounts"
         },
         "push": {
             "apparmor": "push.apparmor",

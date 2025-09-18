@@ -16,13 +16,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from src.constants import APP_ID, APP_NAME, CRASH_REPORT_URL
-from src.lib import setup
+from src.ut_components import setup
 
 setup(APP_NAME, CRASH_REPORT_URL)
 
-from src.lib.kv import KV
-from src.lib.notification import Notification, send_notification
 from src.server import sync_servers
+from src.ut_components.kv import KV
+from src.ut_components.notification import Notification, send_notification
 
 
 def sync_library():

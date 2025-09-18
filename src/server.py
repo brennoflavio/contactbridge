@@ -18,7 +18,7 @@ from src.constants import (
     APP_NAME,
     CRASH_REPORT_URL,
 )
-from src.lib import setup
+from src.ut_components import setup
 
 setup(APP_NAME, CRASH_REPORT_URL)
 import hashlib
@@ -29,15 +29,15 @@ from typing import List, Optional
 from urllib.parse import urljoin
 
 from src.carddav_client import get_carddav_addressbooks
-from src.lib.config import get_app_data_path
-from src.lib.crash import crash_reporter, get_crash_report, set_crash_report
-from src.lib.kv import KV
-from src.lib.utils import dataclass_to_dict, short_string
 from src.syncevolution import (
     syncevolution_first_run,
     syncevolution_remove_address_book,
     syncevolution_two_way_sync,
 )
+from src.ut_components.config import get_app_data_path
+from src.ut_components.crash import crash_reporter, get_crash_report, set_crash_report
+from src.ut_components.kv import KV
+from src.ut_components.utils import dataclass_to_dict, short_string
 from src.utils import (
     get_root_url,
     install_background_service_files,

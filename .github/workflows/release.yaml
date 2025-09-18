@@ -1,0 +1,46 @@
+name: Release Contact Bridge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        image: [ci-20.04-amd64, ci-ut24.04-1.x-amd64]
+    env:
+      MAPPINGS: |
+        {
+          "ci-20.04-amd64": "ubuntu-sdk-20.04",
+          "ci-ut24.04-1.x-amd64": "ubuntu-touch-24.04-1.x"
+        }
+      APP_VERSION: |
+        {
+          "ci-20.04-amd64": "focal",
+          "ci-ut24.04-1.x-amd64": "noble"
+        }
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pull Clickable
+        run: |
+          docker pull clickable/${{ matrix.image }}:latest
+
+      - name: Build
+        run: |
+          docker run --env CLICKABLE_FRAMEWORK=${{ env.CLICKABLE_FRAMEWORK }} --volume ./:/app clickable/${{ matrix.image }}:latest bash -c "cd /app && clickable build"
+        env:
+          CLICKABLE_FRAMEWORK: ${{ fromJSON(env.MAPPINGS)[matrix.image] }}
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: contactbridge_${{ env.NAME }}_all.click
+          path: build/*/app/*.click
+          if-no-files-found: error
+        env:
+          NAME: ${{ fromJSON(env.APP_VERSION)[matrix.image] }}

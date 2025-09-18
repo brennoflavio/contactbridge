@@ -16,22 +16,18 @@
 import QtQuick 2.7
 import Lomiri.Components 1.3
 import io.thp.pyotherside 1.4
-import "lib"
+import "ut_components"
 
 Page {
     id: configurationPage
-
-    signal backRequested
 
     property bool backgroundSyncEnabled: false
     property bool crashReportEnabled: false
 
     header: AppHeader {
         pageTitle: i18n.tr("Configuration")
-        showBackButton: true
+        isRootPage: false
         showSettingsButton: false
-
-        onBackClicked: configurationPage.backRequested()
     }
 
     Component.onCompleted: {

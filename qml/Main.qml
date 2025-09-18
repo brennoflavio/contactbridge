@@ -18,7 +18,7 @@ import Lomiri.Components 1.3
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 import io.thp.pyotherside 1.4
-import "lib"
+import "ut_components"
 import Qt.labs.platform 1.0 as Platform
 import Lomiri.PushNotifications 0.1
 
@@ -49,10 +49,9 @@ MainView {
                 root.serverList = result.servers.map(function (server) {
                         return {
                             "id": server.id,
-                            "name": server.name,
+                            "title": server.name,
                             "icon": "address-book-app-symbolic",
-                            "itemCount": server.item_count || 0,
-                            "description": server.description || ""
+                            "subtitle": server.item_count + " " + i18n.tr("Address Books") + " • " + server.description
                         };
                     });
             });
@@ -68,19 +67,22 @@ MainView {
             id: mainPage
             visible: false
 
+            onActiveChanged: {
+                if (active) {
+                    root.refreshServerList();
+                }
+            }
+
             header: AppHeader {
                 id: mainHeader
                 pageTitle: i18n.tr('Contact Bridge')
-                showBackButton: false
+                isRootPage: true
+                appIconName: "phone-apple-iphone-symbolic"
                 showSettingsButton: true
-                iconName: "phone-apple-iphone-symbolic"
 
                 onSettingsClicked: {
                     root.syncMessage = "";
-                    var configPage = pageStack.push(Qt.resolvedUrl("ConfigurationPage.qml"));
-                    configPage.backRequested.connect(function () {
-                            pageStack.pop();
-                        });
+                    pageStack.push(Qt.resolvedUrl("ConfigurationPage.qml"));
                 }
             }
 
@@ -94,17 +96,14 @@ MainView {
                     margins: units.gu(2)
                     bottomMargin: units.gu(1)
                 }
-                albums: root.serverList
+                items: root.serverList
+                emptyMessage: i18n.tr("No servers configured")
 
-                onAlbumClicked: {
+                onItemClicked: {
                     root.syncMessage = "";
-                    var detailsPage = pageStack.push(Qt.resolvedUrl("ServerDetailsPage.qml"), {
-                            "serverId": albumId,
-                            "serverName": albumName
-                        });
-                    detailsPage.backRequested.connect(function () {
-                            pageStack.pop();
-                            root.refreshServerList();
+                    pageStack.push(Qt.resolvedUrl("ServerDetailsPage.qml"), {
+                            "serverId": item.id,
+                            "serverName": item.title
                         });
                 }
             }
@@ -148,11 +147,7 @@ MainView {
 
                 onClicked: {
                     root.syncMessage = "";
-                    var addPage = pageStack.push(Qt.resolvedUrl("AddServerPage.qml"));
-                    addPage.backRequested.connect(function () {
-                            pageStack.pop();
-                            root.refreshServerList();
-                        });
+                    pageStack.push(Qt.resolvedUrl("AddServerPage.qml"));
                 }
             }
 
@@ -176,7 +171,6 @@ MainView {
             LoadToast {
                 id: syncLoadingToast
                 showing: root.isSyncing
-                showSpinner: true
                 message: i18n.tr("Syncing servers...")
             }
         }
