@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * contactbridge is distributed in the hope that it will be useful,
+ * ut-components is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -16,28 +16,89 @@
 import QtQuick 2.7
 import Lomiri.Components 1.3
 
+/*!
+ * \brief LoadToast - A full-screen loading overlay component for Ubuntu Touch applications
+ *
+ * LoadToast displays a modal overlay with an activity indicator and optional message text.
+ * It blocks user interaction with the underlying content while showing a loading state.
+ *
+ * The component features:
+ * - Semi-transparent backdrop that covers the entire parent
+ * - Centered container with activity spinner
+ * - Optional message text below the spinner
+ * - Smooth fade in/out transitions
+ *
+ * Example usage:
+ * \qml
+ * LoadToast {
+ *     id: loadingOverlay
+ *     showing: dataModel.isLoading
+ *     message: i18n.tr("Loading data...")
+ * }
+ * \endqml
+ *
+ * Example with dynamic message:
+ * \qml
+ * LoadToast {
+ *     id: saveToast
+ *     message: i18n.tr("Saving changes...")
+ * }
+ *
+ * // In your logic:
+ * saveToast.showing = true
+ * backend.saveData()
+ * // Hide when complete:
+ * saveToast.showing = false
+ * \endqml
+ */
 Item {
     id: toast
 
     property bool showing: false
-    property bool showSpinner: true
     property string message: ""
 
-    visible: showing
     anchors.fill: parent
     z: 1000
+    state: showing ? "visible" : "hidden"
+
+    states: [
+        State {
+            name: "visible"
+            PropertyChanges {
+                target: toast
+                opacity: 1.0
+            }
+            PropertyChanges {
+                target: toast
+                visible: true
+            }
+        },
+        State {
+            name: "hidden"
+            PropertyChanges {
+                target: toast
+                opacity: 0.0
+            }
+            PropertyChanges {
+                target: toast
+                visible: false
+            }
+        }
+    ]
+
+    transitions: Transition {
+        from: "*"
+        to: "*"
+        NumberAnimation {
+            properties: "opacity"
+            duration: 200
+            easing.type: Easing.InOutQuad
+        }
+    }
 
     MouseArea {
         anchors.fill: parent
         enabled: toast.showing
-        onClicked:
-        // Block click events from going through
-        {
-        }
-        onPressed:
-        // Block press events from going through
-        {
-        }
     }
 
     Rectangle {
@@ -67,8 +128,7 @@ Item {
             ActivityIndicator {
                 id: spinner
                 anchors.horizontalCenter: parent.horizontalCenter
-                running: toast.showing && toast.showSpinner
-                visible: toast.showSpinner
+                running: toast.showing
             }
 
             Label {

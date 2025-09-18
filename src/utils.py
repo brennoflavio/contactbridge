@@ -20,7 +20,7 @@ import subprocess
 from urllib.parse import urlparse
 
 from constants import SYNC_SERVICE_DEST_PATH, TIMER_SERVICE_DEST_PATH
-from src.lib.config import get_app_data_path
+from src.ut_components.config import get_app_data_path
 
 
 def run_subprocess(args):

@@ -17,7 +17,7 @@ import QtQuick 2.7
 import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
 import io.thp.pyotherside 1.4
-import "lib"
+import "ut_components"
 
 Page {
     id: serverDetailsPage
@@ -31,17 +31,11 @@ Page {
     property bool isUpdatingAddressBook: false
     property bool isDeletingServer: false
 
-    signal backRequested
-
     header: AppHeader {
         id: detailsHeader
         pageTitle: serverName || i18n.tr("Server Details")
-        showBackButton: true
+        isRootPage: false
         showSettingsButton: false
-
-        onBackClicked: {
-            serverDetailsPage.backRequested();
-        }
     }
 
     Flickable {
@@ -249,19 +243,16 @@ Page {
 
     LoadToast {
         showing: isLoading
-        showSpinner: true
         message: i18n.tr("Loading server details...")
     }
 
     LoadToast {
         showing: isUpdatingAddressBook
-        showSpinner: true
         message: i18n.tr("Updating address book...")
     }
 
     LoadToast {
         showing: isDeletingServer
-        showSpinner: true
         message: i18n.tr("Deleting server...")
     }
 
@@ -361,7 +352,7 @@ Page {
         python.call('server.delete_server', [serverId], function (result) {
                 isDeletingServer = false;
                 if (result && result.success) {
-                    serverDetailsPage.backRequested();
+                    pageStack.pop();
                 } else {
                     errorMessage = i18n.tr("Failed to delete server");
                 }

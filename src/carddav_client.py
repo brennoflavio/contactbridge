@@ -20,7 +20,7 @@ from typing import Dict, List, Optional
 from urllib.parse import urljoin, urlparse
 from xml.etree import ElementTree as ET
 
-import src.lib.http as http
+import src.ut_components.http as http
 
 
 @dataclass

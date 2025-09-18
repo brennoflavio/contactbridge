@@ -18,26 +18,19 @@ import Lomiri.Components 1.3
 import QtQuick.Layouts 1.3
 import io.thp.pyotherside 1.4
 import Qt.labs.platform 1.0 as Platform
-import "lib"
+import "ut_components"
 
 Page {
     id: addServerPage
 
-    signal backRequested
     property bool isLoading: false
     property string errorMessage: ""
 
     header: AppHeader {
         id: pageHeader
         pageTitle: i18n.tr("Add Server")
-        showBackButton: !addServerPage.isLoading
+        isRootPage: false
         showSettingsButton: false
-
-        onBackClicked: {
-            if (!addServerPage.isLoading) {
-                addServerPage.backRequested();
-            }
-        }
     }
 
     Form {
@@ -52,48 +45,39 @@ Page {
         buttonText: i18n.tr("Save")
         buttonIconName: "ok"
 
-        fields: [
-            InputField {
-                id: serverUrlField
-                width: parent.width - units.gu(4)
-                anchors.horizontalCenter: parent.horizontalCenter
-                title: i18n.tr("Server URL")
-                placeholder: i18n.tr("https://example.com/caldav")
-                validationRegex: "^https?://[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$"
-                errorMessage: i18n.tr("Please enter a valid URL (e.g., https://example.com)")
-            },
-            InputField {
-                id: usernameField
-                width: parent.width - units.gu(4)
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: serverUrlField.bottom
-                anchors.topMargin: units.gu(1)
-                title: i18n.tr("Username")
-                placeholder: i18n.tr("Enter your username")
-            },
-            InputField {
-                id: passwordField
-                width: parent.width - units.gu(4)
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: usernameField.bottom
-                anchors.topMargin: units.gu(1)
-                title: i18n.tr("Password")
-                placeholder: i18n.tr("Enter your password")
-                echoMode: TextInput.Password
-            }
-        ]
+        InputField {
+            id: serverUrlField
+            width: parent.width
+            title: i18n.tr("Server URL")
+            placeholder: i18n.tr("https://example.com/caldav")
+            validationRegex: "^https?://[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$"
+            required: true
+        }
+
+        InputField {
+            id: usernameField
+            width: parent.width
+            title: i18n.tr("Username")
+            placeholder: i18n.tr("Enter your username")
+            required: true
+        }
+
+        InputField {
+            id: passwordField
+            width: parent.width
+            title: i18n.tr("Password")
+            placeholder: i18n.tr("Enter your password")
+            echoMode: TextInput.Password
+            required: true
+        }
 
         onSubmitted: {
-            if (!serverUrlField.validate() || usernameField.text === "" || passwordField.text === "") {
-                addServerPage.errorMessage = i18n.tr("Please fill all fields");
-                return;
-            }
             addServerPage.isLoading = true;
             addServerPage.errorMessage = "";
             python.call('server.save_server', [serverUrlField.text, usernameField.text, passwordField.text], function (result) {
                     addServerPage.isLoading = false;
                     if (result && result.success === true) {
-                        addServerPage.backRequested();
+                        pageStack.pop();
                     } else {
                         addServerPage.errorMessage = result ? result.message : "Unknown error";
                     }
@@ -121,7 +105,6 @@ Page {
     LoadToast {
         id: loadingToast
         showing: addServerPage.isLoading
-        showSpinner: true
         message: i18n.tr("Connecting to server...")
     }
 
