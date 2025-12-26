@@ -51,7 +51,7 @@ Page {
             width: parent.width
             title: i18n.tr("Server URL")
             placeholder: i18n.tr("https://example.com/caldav")
-            validationRegex: "^https?://[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$"
+            validationRegex: "^https?://([\\w\\-]+(\\.[\\w\\-]+)*|\\d+\\.\\d+\\.\\d+\\.\\d+|\\[[0-9a-fA-F:]+\\])(:[0-9]+)?[/#?]?.*$"
             required: true
         }
 
