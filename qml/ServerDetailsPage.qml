@@ -1,3 +1,5 @@
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 /*
  * Copyright (C) 2025  Brenno Flávio de Almeida
  *
@@ -14,8 +16,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.7
-import Lomiri.Components 1.3
-import Lomiri.Components.Popups 1.3
 import io.thp.pyotherside 1.4
 import "ut_components"
 
@@ -31,14 +31,87 @@ Page {
     property bool isUpdatingAddressBook: false
     property bool isDeletingServer: false
 
-    header: AppHeader {
-        id: detailsHeader
-        pageTitle: serverName || i18n.tr("Server Details")
-        isRootPage: false
-        showSettingsButton: false
+    function loadServerDetails() {
+        if (serverId === "") {
+            isLoading = false;
+            errorMessage = i18n.tr("Invalid server ID");
+            return ;
+        }
+        isLoading = true;
+        errorMessage = "";
+        python.call('server.get_server_detail', [serverId], function(result) {
+            isLoading = false;
+            if (result && result.addressbooks) {
+                addressBooks = result.addressbooks;
+                loadSyncLogs();
+            } else {
+                errorMessage = i18n.tr("Failed to load server details");
+            }
+        });
+    }
+
+    function loadSyncLogs() {
+        python.call('server.server_sync_log', [serverId], function(result) {
+            if (result && result.server_logs)
+                syncLogs = result.server_logs;
+
+        });
+    }
+
+    function updateAddressBookStatus(addressBookId, enabled) {
+        isUpdatingAddressBook = true;
+        python.call('server.update_address_book_status', [serverId, addressBookId, enabled], function(result) {
+            isUpdatingAddressBook = false;
+            loadServerDetails();
+        });
+    }
+
+    function copyToClipboard(text) {
+        Clipboard.push(text);
+        copiedLabel.visible = true;
+        copiedTimer.restart();
+    }
+
+    function buildSyncLogText() {
+        var text = "";
+        for (var i = 0; i < syncLogs.length; i++) {
+            var log = syncLogs[i];
+            text += (log.addressbook_name || i18n.tr("Unknown Address Book")) + "\n";
+            text += i18n.tr("Last sync:") + " " + (log.last_run_time || i18n.tr("Never")) + "\n";
+            text += i18n.tr("Type:") + " " + (log.last_run_type || i18n.tr("Unknown")) + "\n";
+            text += i18n.tr("Status:") + " " + (log.last_run_success ? i18n.tr("Success") : i18n.tr("Failed")) + "\n";
+            if (log.last_run_message && log.last_run_message !== "")
+                text += i18n.tr("Message:") + " " + log.last_run_message + "\n";
+
+            if (i < syncLogs.length - 1)
+                text += "\n";
+
+        }
+        return text;
+    }
+
+    function deleteServer() {
+        isDeletingServer = true;
+        python.call('server.delete_server', [serverId], function(result) {
+            isDeletingServer = false;
+            if (result && result.success)
+                pageStack.pop();
+            else
+                errorMessage = i18n.tr("Failed to delete server");
+        });
+    }
+
+    Component.onCompleted: {
+        if (serverId === "") {
+            errorMessage = i18n.tr("No server ID provided");
+            isLoading = false;
+        }
     }
 
     Flickable {
+        contentHeight: contentColumn.height
+        visible: !isLoading && !errorMessage
+
         anchors {
             top: detailsHeader.bottom
             left: parent.left
@@ -46,11 +119,10 @@ Page {
             bottom: parent.bottom
             margins: units.gu(2)
         }
-        contentHeight: contentColumn.height
-        visible: !isLoading && !errorMessage
 
         Column {
             id: contentColumn
+
             width: parent.width
             spacing: units.gu(2)
 
@@ -65,11 +137,13 @@ Page {
                         title: modelData.name || i18n.tr("Unnamed Address Book")
                         subtitle: ""
                         checked: modelData.enabled || false
-                        onToggled: function (checked) {
+                        onToggled: function(checked) {
                             updateAddressBookStatus(modelData.id, checked);
                         }
                     }
+
                 }
+
             }
 
             Label {
@@ -87,6 +161,7 @@ Page {
 
             ActionButton {
                 id: deleteServerButton
+
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Delete Server")
                 iconName: "delete"
@@ -109,15 +184,17 @@ Page {
                     model: syncLogs
 
                     Item {
+                        property bool expanded: false
+
                         width: parent.width
                         height: logColumn.height + units.gu(2)
 
-                        property bool expanded: false
-
                         Column {
                             id: logColumn
+
                             width: parent.width
                             spacing: units.gu(0.5)
+
                             anchors {
                                 left: parent.left
                                 right: parent.right
@@ -146,6 +223,7 @@ Page {
                                     fontSize: "small"
                                     color: theme.palette.normal.backgroundTertiaryText
                                 }
+
                             }
 
                             Row {
@@ -162,6 +240,7 @@ Page {
                                     fontSize: "small"
                                     color: theme.palette.normal.backgroundTertiaryText
                                 }
+
                             }
 
                             Row {
@@ -178,17 +257,18 @@ Page {
                                     fontSize: "small"
                                     color: modelData.last_run_success ? theme.palette.normal.positive : theme.palette.normal.negative
                                 }
+
                             }
 
                             Label {
                                 width: parent.width
                                 text: {
-                                    if (!modelData.last_run_message || modelData.last_run_message === "") {
+                                    if (!modelData.last_run_message || modelData.last_run_message === "")
                                         return "";
-                                    }
-                                    if (modelData.last_run_message.length > 150 && !parent.parent.expanded) {
+
+                                    if (modelData.last_run_message.length > 150 && !parent.parent.expanded)
                                         return modelData.last_run_message.substring(0, 150) + "...";
-                                    }
+
                                     return modelData.last_run_message;
                                 }
                                 fontSize: "small"
@@ -209,21 +289,37 @@ Page {
                                         parent.parent.parent.expanded = !parent.parent.parent.expanded;
                                     }
                                 }
+
                             }
 
                             Rectangle {
                                 width: parent.width + units.gu(4)
                                 height: units.gu(0.1)
                                 color: theme.palette.normal.base
+                                visible: index < syncLogs.length - 1
+
                                 anchors {
                                     left: parent.left
                                     leftMargin: -units.gu(2)
                                 }
-                                visible: index < syncLogs.length - 1
+
                             }
+
                         }
+
+                    }
+
+                }
+
+                ActionButton {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    iconName: "edit-copy"
+                    text: i18n.tr("Copy Logs")
+                    onClicked: {
+                        copyToClipboard(buildSyncLogText());
                     }
                 }
+
             }
 
             Label {
@@ -238,7 +334,38 @@ Page {
                 width: parent.width
                 height: units.gu(2)
             }
+
         }
+
+    }
+
+    Label {
+        id: copiedLabel
+
+        z: 100
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: units.gu(4)
+        anchors.horizontalCenter: parent.horizontalCenter
+        text: i18n.tr("Copied to clipboard")
+        fontSize: "small"
+        color: theme.palette.normal.overlayText
+        visible: false
+
+        Rectangle {
+            anchors.fill: parent
+            anchors.margins: -units.gu(1.5)
+            color: theme.palette.normal.overlay
+            radius: units.gu(1)
+            z: -1
+        }
+
+    }
+
+    Timer {
+        id: copiedTimer
+
+        interval: 2000
+        onTriggered: copiedLabel.visible = false
     }
 
     LoadToast {
@@ -268,8 +395,10 @@ Page {
 
     Component {
         id: deleteConfirmDialog
+
         Dialog {
             id: dialogue
+
             title: i18n.tr("Delete Server")
             text: i18n.tr("This will remove the Addressbooks from your device. Are you sure?")
 
@@ -286,7 +415,9 @@ Page {
                     deleteServer();
                 }
             }
+
         }
+
     }
 
     Python {
@@ -294,68 +425,22 @@ Page {
 
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../../src/'));
-            importModule('server', function () {
-                    loadServerDetails();
-                });
+            importModule('server', function() {
+                loadServerDetails();
+            });
         }
-
         onError: {
             isLoading = false;
             errorMessage = i18n.tr("Error loading server details");
         }
     }
 
-    Component.onCompleted: {
-        if (serverId === "") {
-            errorMessage = i18n.tr("No server ID provided");
-            isLoading = false;
-        }
+    header: AppHeader {
+        id: detailsHeader
+
+        pageTitle: serverName || i18n.tr("Server Details")
+        isRootPage: false
+        showSettingsButton: false
     }
 
-    function loadServerDetails() {
-        if (serverId === "") {
-            isLoading = false;
-            errorMessage = i18n.tr("Invalid server ID");
-            return;
-        }
-        isLoading = true;
-        errorMessage = "";
-        python.call('server.get_server_detail', [serverId], function (result) {
-                isLoading = false;
-                if (result && result.addressbooks) {
-                    addressBooks = result.addressbooks;
-                    loadSyncLogs();
-                } else {
-                    errorMessage = i18n.tr("Failed to load server details");
-                }
-            });
-    }
-
-    function loadSyncLogs() {
-        python.call('server.server_sync_log', [serverId], function (result) {
-                if (result && result.server_logs) {
-                    syncLogs = result.server_logs;
-                }
-            });
-    }
-
-    function updateAddressBookStatus(addressBookId, enabled) {
-        isUpdatingAddressBook = true;
-        python.call('server.update_address_book_status', [serverId, addressBookId, enabled], function (result) {
-                isUpdatingAddressBook = false;
-                loadServerDetails();
-            });
-    }
-
-    function deleteServer() {
-        isDeletingServer = true;
-        python.call('server.delete_server', [serverId], function (result) {
-                isDeletingServer = false;
-                if (result && result.success) {
-                    pageStack.pop();
-                } else {
-                    errorMessage = i18n.tr("Failed to delete server");
-                }
-            });
-    }
 }

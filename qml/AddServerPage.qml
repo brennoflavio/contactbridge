@@ -1,3 +1,6 @@
+import Lomiri.Components 1.3
+import Lomiri.OnlineAccounts 2.0
+import Qt.labs.platform 1.0 as Platform
 /*
  * Copyright (C) 2025  Brenno Flávio de Almeida
  *
@@ -14,11 +17,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.7
-import Lomiri.Components 1.3
 import QtQuick.Layouts 1.3
 import io.thp.pyotherside 1.4
-import Qt.labs.platform 1.0 as Platform
-import Lomiri.OnlineAccounts 2.0
 import "ut_components"
 
 Page {
@@ -27,15 +27,33 @@ Page {
     property bool isLoading: false
     property string errorMessage: ""
 
-    header: AppHeader {
-        id: pageHeader
-        pageTitle: i18n.tr("Add Server")
-        isRootPage: false
-        showSettingsButton: false
+    function useAccount(account) {
+        addServerPage.isLoading = true;
+        addServerPage.errorMessage = "";
+        accountConnection.target = account;
+        account.authenticate({
+            "host": account.settings.host,
+            "accountId": account.accountId
+        });
     }
 
     Form {
         id: serverForm
+
+        buttonText: i18n.tr("Save")
+        buttonIconName: "ok"
+        onSubmitted: {
+            addServerPage.isLoading = true;
+            addServerPage.errorMessage = "";
+            python.call('server.save_server', [serverUrlField.text, usernameField.text, passwordField.text], function(result) {
+                addServerPage.isLoading = false;
+                if (result && result.success === true)
+                    pageStack.pop();
+                else
+                    addServerPage.errorMessage = result ? result.message : "Unknown error";
+            });
+        }
+
         anchors {
             top: pageHeader.bottom
             left: parent.left
@@ -43,20 +61,19 @@ Page {
             topMargin: units.gu(2)
         }
 
-        buttonText: i18n.tr("Save")
-        buttonIconName: "ok"
-
         InputField {
             id: serverUrlField
+
             width: parent.width
             title: i18n.tr("Server URL")
             placeholder: i18n.tr("https://example.com/caldav")
-            validationRegex: "^https?://[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$"
+            validationRegex: "^https?://([\\w\\-]+(\\.[\\w\\-]+)*|\\d+\\.\\d+\\.\\d+\\.\\d+|\\[[0-9a-fA-F:]+\\])(:[0-9]+)?[/#?]?.*$"
             required: true
         }
 
         InputField {
             id: usernameField
+
             width: parent.width
             title: i18n.tr("Username")
             placeholder: i18n.tr("Enter your username")
@@ -65,6 +82,7 @@ Page {
 
         InputField {
             id: passwordField
+
             width: parent.width
             title: i18n.tr("Password")
             placeholder: i18n.tr("Enter your password")
@@ -72,22 +90,17 @@ Page {
             required: true
         }
 
-        onSubmitted: {
-            addServerPage.isLoading = true;
-            addServerPage.errorMessage = "";
-            python.call('server.save_server', [serverUrlField.text, usernameField.text, passwordField.text], function (result) {
-                    addServerPage.isLoading = false;
-                    if (result && result.success === true) {
-                        pageStack.pop();
-                    } else {
-                        addServerPage.errorMessage = result ? result.message : "Unknown error";
-                    }
-                });
-        }
     }
 
     Label {
         id: errorLabel
+
+        text: addServerPage.errorMessage
+        color: theme.palette.normal.negative
+        wrapMode: Text.WordWrap
+        horizontalAlignment: Text.AlignHCenter
+        visible: addServerPage.errorMessage !== ""
+
         anchors {
             top: serverForm.bottom
             left: parent.left
@@ -96,46 +109,48 @@ Page {
             leftMargin: units.gu(2)
             rightMargin: units.gu(2)
         }
-        text: addServerPage.errorMessage
-        color: theme.palette.normal.negative
-        wrapMode: Text.WordWrap
-        horizontalAlignment: Text.AlignHCenter
-        visible: addServerPage.errorMessage !== ""
+
     }
 
     ActionButton {
         id: importAccountButton
+
+        text: i18n.tr("Import Account")
+        iconName: "contact-new"
+        onClicked: {
+            accountModel.requestAccess(accountModel.applicationId + "_nextcloud", {
+            });
+        }
+
         anchors {
             top: errorLabel.bottom
             horizontalCenter: parent.horizontalCenter
             topMargin: units.gu(2)
         }
-        text: i18n.tr("Import Account")
-        iconName: "contact-new"
-        onClicked: {
-            accountModel.requestAccess(accountModel.applicationId + "_nextcloud", {});
-        }
+
     }
 
     LoadToast {
         id: loadingToast
+
         showing: addServerPage.isLoading
         message: i18n.tr("Connecting to server...")
     }
 
     AccountModel {
         id: accountModel
+
         onAccessReply: {
-            if (reply.errorCode) {
+            if (reply.errorCode)
                 addServerPage.errorMessage = i18n.tr("Failed to obtain account access: %1").arg(reply.errorText);
-            } else {
+            else
                 useAccount(reply.account);
-            }
         }
     }
 
     Connections {
         id: accountConnection
+
         target: null
         onAuthenticationReply: {
             var reply = authenticationData;
@@ -146,26 +161,15 @@ Page {
                 var serverUrl = accountConnection.target.settings.host || "";
                 var username = reply.Username || "";
                 var password = reply.Password || "";
-                python.call('server.save_server', [serverUrl, username, password], function (result) {
-                        addServerPage.isLoading = false;
-                        if (result && result.success === true) {
-                            pageStack.pop();
-                        } else {
-                            addServerPage.errorMessage = result ? result.message : "Unknown error";
-                        }
-                    });
+                python.call('server.save_server', [serverUrl, username, password], function(result) {
+                    addServerPage.isLoading = false;
+                    if (result && result.success === true)
+                        pageStack.pop();
+                    else
+                        addServerPage.errorMessage = result ? result.message : "Unknown error";
+                });
             }
         }
-    }
-
-    function useAccount(account) {
-        addServerPage.isLoading = true;
-        addServerPage.errorMessage = "";
-        accountConnection.target = account;
-        account.authenticate({
-                "host": account.settings.host,
-                "accountId": account.accountId
-            });
     }
 
     Python {
@@ -174,8 +178,16 @@ Page {
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../../src/'));
         }
-
         onError: {
         }
     }
+
+    header: AppHeader {
+        id: pageHeader
+
+        pageTitle: i18n.tr("Add Server")
+        isRootPage: false
+        showSettingsButton: false
+    }
+
 }
