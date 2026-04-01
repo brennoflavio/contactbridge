@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the contactbridge.brennoflavio package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: contactbridge.brennoflavio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-29 17:56+0000\n"
+"PO-Revision-Date: 2026-04-01 20:10+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../qml/AddServerPage.qml:43
+msgid "Save"
+msgstr "Opslaan"
+
+#: ../qml/AddServerPage.qml:68
+msgid "Server URL"
+msgstr "Server-url"
+
+#: ../qml/AddServerPage.qml:69
+msgid "https://example.com/caldav"
+msgstr "https://voorbeeld.nl/caldav"
+
+#: ../qml/AddServerPage.qml:78
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: ../qml/AddServerPage.qml:79
+msgid "Enter your username"
+msgstr "Voer je gebruikersnaam in"
+
+#: ../qml/AddServerPage.qml:87
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: ../qml/AddServerPage.qml:88
+msgid "Enter your password"
+msgstr "Voer je wachtwoord in"
+
+#: ../qml/AddServerPage.qml:118
+msgid "Import Account"
+msgstr "Account importeren"
+
+#: ../qml/AddServerPage.qml:137
+msgid "Connecting to server..."
+msgstr "Bezig met verbinden met server…"
+
+#: ../qml/AddServerPage.qml:145
+msgid "Failed to obtain account access: %1"
+msgstr "Accounttoegang is geweigerd: %1"
+
+#: ../qml/AddServerPage.qml:158
+msgid "Authentication error: %1"
+msgstr "Verificatiefout: %1"
+
+#: ../qml/AddServerPage.qml:188 ../qml/Main.qml:145
+msgid "Add Server"
+msgstr "Server toevoegen"
+
+#: ../qml/ConfigurationPage.qml:28
+msgid "Configuration"
+msgstr "Instellingen"
+
+#: ../qml/ConfigurationPage.qml:52
+msgid "Updating background sync settings..."
+msgstr "Bezig met bijwerken van synchronisatie-instellingen…"
+
+#: ../qml/ConfigurationPage.qml:60
+msgid "Failed to update background sync settings"
+msgstr "De synchronisatie-instellingen kunnen niet worden bijgewerkt"
+
+#: ../qml/ConfigurationPage.qml:84
+msgid "General"
+msgstr "Algemeen"
+
+#: ../qml/ConfigurationPage.qml:87
+msgid "Background sync"
+msgstr "Achtergrondsynchronisatie"
+
+#: ../qml/ConfigurationPage.qml:88
+msgid "Install Systemd Timer for background updates"
+msgstr "Installeer de systemd-timer om op de achtergrond bij te werken"
+
+#: ../qml/ConfigurationPage.qml:97
+msgid "Crash logs"
+msgstr "Crashlogboek"
+
+#: ../qml/ConfigurationPage.qml:98
+msgid "Send anonymous crash reports"
+msgstr "Anonieme crashverslagen delen"
+
+#: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
+msgid "Address Books"
+msgstr "Adresboeken"
+
+#: ../qml/Main.qml:78 contactbridge.desktop.in.h:1
+msgid "Contact Bridge"
+msgstr "Contactpersoonbrug"
+
+#: ../qml/Main.qml:100
+msgid "No servers configured"
+msgstr "Er zijn geen servers ingesteld"
+
+#: ../qml/Main.qml:118
+msgid "Sync Servers"
+msgstr "Synchronisatieservers"
+
+#: ../qml/Main.qml:132
+msgid "Unknown sync error"
+msgstr "Onbekende synchronisatiefout"
+
+#: ../qml/Main.qml:174
+msgid "Syncing servers..."
+msgstr "Bezig met serversynchronisatie…"
+
+#: ../qml/ServerDetailsPage.qml:37
+msgid "Invalid server ID"
+msgstr "De server-id is ongeldig"
+
+#: ../qml/ServerDetailsPage.qml:48
+msgid "Failed to load server details"
+msgstr "De serverinformatie kan niet worden opgehaald"
+
+#: ../qml/ServerDetailsPage.qml:79 ../qml/ServerDetailsPage.qml:207
+msgid "Unknown Address Book"
+msgstr "Dit adresboek is onbekend"
+
+#: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:216
+msgid "Last sync:"
+msgstr "Recentste synchronisatie:"
+
+#: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
+msgid "Never"
+msgstr "Nooit"
+
+#: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:233
+msgid "Type:"
+msgstr "Type:"
+
+#: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:239
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
+msgid "Failed"
+msgstr "Mislukt"
+
+#: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:250
+msgid "Status:"
+msgstr "Status:"
+
+#: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
+msgid "Success"
+msgstr "Afgerond"
+
+#: ../qml/ServerDetailsPage.qml:84
+msgid "Message:"
+msgstr "Bericht:"
+
+#: ../qml/ServerDetailsPage.qml:100
+msgid "Failed to delete server"
+msgstr "De server kan niet worden verwijderd"
+
+#: ../qml/ServerDetailsPage.qml:106
+msgid "No server ID provided"
+msgstr "Er is geen server-id opgegeven"
+
+#: ../qml/ServerDetailsPage.qml:137
+msgid "Unnamed Address Book"
+msgstr "Naamloos adresboek"
+
+#: ../qml/ServerDetailsPage.qml:151
+msgid "No address books found"
+msgstr "Er zijn geen adresboeken aangetroffen"
+
+#: ../qml/ServerDetailsPage.qml:166 ../qml/ServerDetailsPage.qml:402
+msgid "Delete Server"
+msgstr "Server verwijderen"
+
+#: ../qml/ServerDetailsPage.qml:180
+msgid "Sync Logs"
+msgstr "Synchronisatielogboek"
+
+#: ../qml/ServerDetailsPage.qml:281
+msgid "Show less"
+msgstr "Minder tonen"
+
+#: ../qml/ServerDetailsPage.qml:281
+msgid "Show more"
+msgstr "Meer tonen"
+
+#: ../qml/ServerDetailsPage.qml:317
+msgid "Copy Logs"
+msgstr "Logboek kopiëren"
+
+#: ../qml/ServerDetailsPage.qml:327
+msgid "No sync logs available"
+msgstr "Er is geen logboek beschikbaar"
+
+#: ../qml/ServerDetailsPage.qml:349
+msgid "Copied to clipboard"
+msgstr "Gekopieerd naar het klembord"
+
+#: ../qml/ServerDetailsPage.qml:373
+msgid "Loading server details..."
+msgstr "Bezig met laden van serverinformatie…"
+
+#: ../qml/ServerDetailsPage.qml:378
+msgid "Updating address book..."
+msgstr "Bezig met bijwerken van adresboek…"
+
+#: ../qml/ServerDetailsPage.qml:383
+msgid "Deleting server..."
+msgstr "Bezig met verwijderen van server…"
+
+#: ../qml/ServerDetailsPage.qml:403
+msgid "This will remove the Addressbooks from your device. Are you sure?"
+msgstr "Let op: hierdoor worden alle adresboeken op je apparaat verwijderd. Weet je het zeker?"
+
+#: ../qml/ServerDetailsPage.qml:406
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../qml/ServerDetailsPage.qml:411
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: ../qml/ServerDetailsPage.qml:434
+msgid "Error loading server details"
+msgstr "De serverinformatie kan niet worden opgehaald"
+
+#: ../qml/ServerDetailsPage.qml:441
+msgid "Server Details"
+msgstr "Serverinformatie"
+
+#: ../qml/ut_components/ActionableList.qml:94
+#: ../qml/ut_components/CardList.qml:74
+msgid "Search"
+msgstr "Zoeken"
+
+#: ../qml/ut_components/ActionableList.qml:97
+#: ../qml/ut_components/CardList.qml:72
+msgid "No items"
+msgstr "Er zijn geen items"
+
+#: ../qml/ut_components/AppHeader.qml:81
+msgid "Back"
+msgstr "Terug"
+
+#: ../qml/ut_components/AppHeader.qml:97
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../qml/ut_components/Form.qml:68
+msgid "Submit"
+msgstr "Versturen"
+
+#: ../qml/ut_components/InputField.qml:96
+msgid "Invalid input"
+msgstr "De invoer is ongeldig"
+
+#: ../qml/ut_components/InputField.qml:169
+msgid "This field is required"
+msgstr "Dit veld is vereist"
