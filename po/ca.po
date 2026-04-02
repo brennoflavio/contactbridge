@@ -8,82 +8,85 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-03 20:09+0000\n"
+"Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/ubports/contact-"
+"bridge/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: ../qml/AddServerPage.qml:43
 msgid "Save"
-msgstr ""
+msgstr "Desa"
 
 #: ../qml/AddServerPage.qml:68
 msgid "Server URL"
-msgstr ""
+msgstr "URL del servidor"
 
 #: ../qml/AddServerPage.qml:69
 msgid "https://example.com/caldav"
-msgstr ""
+msgstr "https://example.com/caldav"
 
 #: ../qml/AddServerPage.qml:78
 msgid "Username"
-msgstr ""
+msgstr "Nom d'usuari"
 
 #: ../qml/AddServerPage.qml:79
 msgid "Enter your username"
-msgstr ""
+msgstr "Entreu el vostre nom d'usuari"
 
 #: ../qml/AddServerPage.qml:87
 msgid "Password"
-msgstr ""
+msgstr "Contrasenya"
 
 #: ../qml/AddServerPage.qml:88
 msgid "Enter your password"
-msgstr ""
+msgstr "Entreu la vostra contrasenya"
 
 #: ../qml/AddServerPage.qml:118
 msgid "Import Account"
-msgstr ""
+msgstr "Importa el compte"
 
 #: ../qml/AddServerPage.qml:137
 msgid "Connecting to server..."
-msgstr ""
+msgstr "S'està connectant al servidor..."
 
 #: ../qml/AddServerPage.qml:145
 msgid "Failed to obtain account access: %1"
-msgstr ""
+msgstr "No s'ha pogut obtenir l'accés al compte: %1"
 
 #: ../qml/AddServerPage.qml:158
 msgid "Authentication error: %1"
-msgstr ""
+msgstr "Error d'autenticació: %1"
 
 #: ../qml/AddServerPage.qml:188 ../qml/Main.qml:145
 msgid "Add Server"
-msgstr ""
+msgstr "Afegeix un servidor"
 
 #: ../qml/ConfigurationPage.qml:28
 msgid "Configuration"
-msgstr ""
+msgstr "Configuració"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
-msgstr ""
+msgstr "S'està actualitzant la configuració de sincronització en segon pla..."
 
 #: ../qml/ConfigurationPage.qml:60
 msgid "Failed to update background sync settings"
 msgstr ""
+"No s'ha pogut actualitzar la configuració de sincronització en segon pla"
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: ../qml/ConfigurationPage.qml:87
 msgid "Background sync"
-msgstr ""
+msgstr "Sincronització en segon pla"
 
 #: ../qml/ConfigurationPage.qml:88
 msgid "Install Systemd Timer for background updates"
@@ -257,7 +260,7 @@ msgstr ""
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
-msgstr ""
+msgstr "Paràmetres"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
