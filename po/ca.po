@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-03 20:09+0000\n"
+"PO-Revision-Date: 2026-04-06 13:09+0000\n"
 "Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/ca/>\n"
@@ -90,173 +90,175 @@ msgstr "Sincronització en segon pla"
 
 #: ../qml/ConfigurationPage.qml:88
 msgid "Install Systemd Timer for background updates"
-msgstr ""
+msgstr "Instal·la el Systemd Timer per a actualitzacions en segon pla"
 
 #: ../qml/ConfigurationPage.qml:97
 msgid "Crash logs"
-msgstr ""
+msgstr "Registres de fallades"
 
 #: ../qml/ConfigurationPage.qml:98
 msgid "Send anonymous crash reports"
-msgstr ""
+msgstr "Envia informes anònims de fallades"
 
 #: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
 msgid "Address Books"
-msgstr ""
+msgstr "Llibres d'adreces"
 
 #: ../qml/Main.qml:78 contactbridge.desktop.in.h:1
 msgid "Contact Bridge"
-msgstr ""
+msgstr "Contact Bridge"
 
 #: ../qml/Main.qml:100
 msgid "No servers configured"
-msgstr ""
+msgstr "No s'ha configurat cap servidor"
 
 #: ../qml/Main.qml:118
 msgid "Sync Servers"
-msgstr ""
+msgstr "Sincronitza els servidors"
 
 #: ../qml/Main.qml:132
 msgid "Unknown sync error"
-msgstr ""
+msgstr "Error desconegut de sincronització"
 
 #: ../qml/Main.qml:174
 msgid "Syncing servers..."
-msgstr ""
+msgstr "S'estan sincronitzant els servidors..."
 
 #: ../qml/ServerDetailsPage.qml:37
 msgid "Invalid server ID"
-msgstr ""
+msgstr "ID no vàlid de servidor"
 
 #: ../qml/ServerDetailsPage.qml:48
 msgid "Failed to load server details"
-msgstr ""
+msgstr "No s'han pogut carregar els detalls del servidor"
 
 #: ../qml/ServerDetailsPage.qml:79 ../qml/ServerDetailsPage.qml:207
 msgid "Unknown Address Book"
-msgstr ""
+msgstr "Llibre d'adreces desconegut"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:216
 msgid "Last sync:"
-msgstr ""
+msgstr "Última sincronització:"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
 msgid "Never"
-msgstr ""
+msgstr "Mai"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:233
 msgid "Type:"
-msgstr ""
+msgstr "Tipus:"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:239
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Failed"
-msgstr ""
+msgstr "Fallat"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:250
 msgid "Status:"
-msgstr ""
+msgstr "Estat:"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Success"
-msgstr ""
+msgstr "Èxit"
 
 #: ../qml/ServerDetailsPage.qml:84
 msgid "Message:"
-msgstr ""
+msgstr "Missatge:"
 
 #: ../qml/ServerDetailsPage.qml:100
 msgid "Failed to delete server"
-msgstr ""
+msgstr "No s'ha pogut suprimir el servidor"
 
 #: ../qml/ServerDetailsPage.qml:106
 msgid "No server ID provided"
-msgstr ""
+msgstr "No s'ha proveït un ID de servidor"
 
 #: ../qml/ServerDetailsPage.qml:137
 msgid "Unnamed Address Book"
-msgstr ""
+msgstr "Llibre d'adreces sense nom"
 
 #: ../qml/ServerDetailsPage.qml:151
 msgid "No address books found"
-msgstr ""
+msgstr "No s'ha trobat cap llibre d'adreces"
 
 #: ../qml/ServerDetailsPage.qml:166 ../qml/ServerDetailsPage.qml:402
 msgid "Delete Server"
-msgstr ""
+msgstr "Suprimeix el servidor"
 
 #: ../qml/ServerDetailsPage.qml:180
 msgid "Sync Logs"
-msgstr ""
+msgstr "Registres de sincronització"
 
 #: ../qml/ServerDetailsPage.qml:281
 msgid "Show less"
-msgstr ""
+msgstr "Mostra menys"
 
 #: ../qml/ServerDetailsPage.qml:281
 msgid "Show more"
-msgstr ""
+msgstr "Mostra més"
 
 #: ../qml/ServerDetailsPage.qml:317
 msgid "Copy Logs"
-msgstr ""
+msgstr "Copia els registres"
 
 #: ../qml/ServerDetailsPage.qml:327
 msgid "No sync logs available"
-msgstr ""
+msgstr "No hi ha registres de sincronització disponibles"
 
 #: ../qml/ServerDetailsPage.qml:349
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "S'ha copiat el porta-retalls"
 
 #: ../qml/ServerDetailsPage.qml:373
 msgid "Loading server details..."
-msgstr ""
+msgstr "S'estan carregant els detalls del servidor..."
 
 #: ../qml/ServerDetailsPage.qml:378
 msgid "Updating address book..."
-msgstr ""
+msgstr "S'està actualitzant el llibre d'adreces..."
 
 #: ../qml/ServerDetailsPage.qml:383
 msgid "Deleting server..."
-msgstr ""
+msgstr "S'està suprimint el servidor..."
 
 #: ../qml/ServerDetailsPage.qml:403
 msgid "This will remove the Addressbooks from your device. Are you sure?"
 msgstr ""
+"Això suprimirà els llibres d'adreces del vostre dispositiu. Segur que ho "
+"voleu fer?"
 
 #: ../qml/ServerDetailsPage.qml:406
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: ../qml/ServerDetailsPage.qml:411
 msgid "Delete"
-msgstr ""
+msgstr "Suprimeix"
 
 #: ../qml/ServerDetailsPage.qml:434
 msgid "Error loading server details"
-msgstr ""
+msgstr "S'ha produït un error en carregar els detalls del servidor"
 
 #: ../qml/ServerDetailsPage.qml:441
 msgid "Server Details"
-msgstr ""
+msgstr "Detalls del servidor"
 
 #: ../qml/ut_components/ActionableList.qml:94
 #: ../qml/ut_components/CardList.qml:74
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #: ../qml/ut_components/ActionableList.qml:97
 #: ../qml/ut_components/CardList.qml:72
 msgid "No items"
-msgstr ""
+msgstr "Cap element"
 
 #: ../qml/ut_components/AppHeader.qml:81
 msgid "Back"
-msgstr ""
+msgstr "Enrere"
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
@@ -264,12 +266,12 @@ msgstr "Paràmetres"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
-msgstr ""
+msgstr "Envia"
 
 #: ../qml/ut_components/InputField.qml:96
 msgid "Invalid input"
-msgstr ""
+msgstr "Entrada no vàlida"
 
 #: ../qml/ut_components/InputField.qml:169
 msgid "This field is required"
-msgstr ""
+msgstr "Es requereix aquest camp"
