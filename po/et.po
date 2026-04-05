@@ -8,50 +8,52 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-06 13:09+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/ubports/contact-"
+"bridge/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: ../qml/AddServerPage.qml:43
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 #: ../qml/AddServerPage.qml:68
 msgid "Server URL"
-msgstr ""
+msgstr "Serveri võrguaadress"
 
 #: ../qml/AddServerPage.qml:69
 msgid "https://example.com/caldav"
-msgstr ""
+msgstr "https://toreserver.ee/caldav"
 
 #: ../qml/AddServerPage.qml:78
 msgid "Username"
-msgstr ""
+msgstr "Kasutajanimi"
 
 #: ../qml/AddServerPage.qml:79
 msgid "Enter your username"
-msgstr ""
+msgstr "Sisesta oma kasutajanimi"
 
 #: ../qml/AddServerPage.qml:87
 msgid "Password"
-msgstr ""
+msgstr "Salasõna"
 
 #: ../qml/AddServerPage.qml:88
 msgid "Enter your password"
-msgstr ""
+msgstr "Sisesta oma salasõna"
 
 #: ../qml/AddServerPage.qml:118
 msgid "Import Account"
-msgstr ""
+msgstr "Impordi kasutajakonto"
 
 #: ../qml/AddServerPage.qml:137
 msgid "Connecting to server..."
-msgstr ""
+msgstr "Ühendame serveriga…"
 
 #: ../qml/AddServerPage.qml:145
 msgid "Failed to obtain account access: %1"
@@ -139,51 +141,51 @@ msgstr ""
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
 msgid "Never"
-msgstr ""
+msgstr "Mitte kunagi"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:233
 msgid "Type:"
-msgstr ""
+msgstr "Tüüp:"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:239
 msgid "Unknown"
-msgstr ""
+msgstr "Pole teada"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Failed"
-msgstr ""
+msgstr "Tegevus ei õnnestunud"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:250
 msgid "Status:"
-msgstr ""
+msgstr "Olek:"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Success"
-msgstr ""
+msgstr "Õnnestus"
 
 #: ../qml/ServerDetailsPage.qml:84
 msgid "Message:"
-msgstr ""
+msgstr "Sõnum:"
 
 #: ../qml/ServerDetailsPage.qml:100
 msgid "Failed to delete server"
-msgstr ""
+msgstr "Serveri eemaldamine ei õnnestunu"
 
 #: ../qml/ServerDetailsPage.qml:106
 msgid "No server ID provided"
-msgstr ""
+msgstr "Sa pole ühtegi serveri tunnust lisanud"
 
 #: ../qml/ServerDetailsPage.qml:137
 msgid "Unnamed Address Book"
-msgstr ""
+msgstr "Ilma nimeta aadressiraamat"
 
 #: ../qml/ServerDetailsPage.qml:151
 msgid "No address books found"
-msgstr ""
+msgstr "Ühtegi aadressiraamatut ei leidu"
 
 #: ../qml/ServerDetailsPage.qml:166 ../qml/ServerDetailsPage.qml:402
 msgid "Delete Server"
-msgstr ""
+msgstr "Eemalda server"
 
 #: ../qml/ServerDetailsPage.qml:180
 msgid "Sync Logs"
@@ -257,7 +259,7 @@ msgstr ""
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
-msgstr ""
+msgstr "Seadistused"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
