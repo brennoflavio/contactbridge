@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-02 19:44+0000\n"
+"PO-Revision-Date: 2026-04-06 13:09+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/nl/>\n"
@@ -97,7 +97,7 @@ msgstr "Crashlogboek"
 
 #: ../qml/ConfigurationPage.qml:98
 msgid "Send anonymous crash reports"
-msgstr "Anonieme crashverslagen delen"
+msgstr "Verstuur anonieme crashverslagen"
 
 #: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
 msgid "Address Books"
@@ -265,7 +265,7 @@ msgstr "Instellingen"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
-msgstr "Versturen"
+msgstr "Indienen"
 
 #: ../qml/ut_components/InputField.qml:96
 msgid "Invalid input"
