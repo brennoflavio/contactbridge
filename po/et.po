@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-06 13:09+0000\n"
+"PO-Revision-Date: 2026-04-09 17:51+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/et/>\n"
@@ -246,16 +246,16 @@ msgstr ""
 #: ../qml/ut_components/ActionableList.qml:94
 #: ../qml/ut_components/CardList.qml:74
 msgid "Search"
-msgstr ""
+msgstr "Otsi"
 
 #: ../qml/ut_components/ActionableList.qml:97
 #: ../qml/ut_components/CardList.qml:72
 msgid "No items"
-msgstr ""
+msgstr "Objekte pole"
 
 #: ../qml/ut_components/AppHeader.qml:81
 msgid "Back"
-msgstr ""
+msgstr "Tagasi"
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
@@ -263,12 +263,12 @@ msgstr "Seadistused"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
-msgstr ""
+msgstr "Saada"
 
 #: ../qml/ut_components/InputField.qml:96
 msgid "Invalid input"
-msgstr ""
+msgstr "Vigane sisend"
 
 #: ../qml/ut_components/InputField.qml:169
 msgid "This field is required"
-msgstr ""
+msgstr "See väli on kohustuslik"
