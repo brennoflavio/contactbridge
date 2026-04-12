@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-09 17:51+0000\n"
+"PO-Revision-Date: 2026-04-13 10:09+0000\n"
 "Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/ca/>\n"
@@ -258,7 +258,7 @@ msgstr "Cap element"
 
 #: ../qml/ut_components/AppHeader.qml:81
 msgid "Back"
-msgstr "Negre"
+msgstr "Enrere"
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
