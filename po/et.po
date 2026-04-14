@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-09 17:51+0000\n"
+"PO-Revision-Date: 2026-04-14 16:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/et/>\n"
@@ -61,15 +61,15 @@ msgstr ""
 
 #: ../qml/AddServerPage.qml:158
 msgid "Authentication error: %1"
-msgstr ""
+msgstr "Autentimisviga: %1"
 
 #: ../qml/AddServerPage.qml:188 ../qml/Main.qml:145
 msgid "Add Server"
-msgstr ""
+msgstr "Lisa server"
 
 #: ../qml/ConfigurationPage.qml:28
 msgid "Configuration"
-msgstr ""
+msgstr "Seadistused"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
@@ -81,27 +81,27 @@ msgstr ""
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
-msgstr ""
+msgstr "Üldseadistused"
 
 #: ../qml/ConfigurationPage.qml:87
 msgid "Background sync"
-msgstr ""
+msgstr "Sünkroonimine taustal"
 
 #: ../qml/ConfigurationPage.qml:88
 msgid "Install Systemd Timer for background updates"
-msgstr ""
+msgstr "Taustal uuendamiseks paigalda Systemd Timer"
 
 #: ../qml/ConfigurationPage.qml:97
 msgid "Crash logs"
-msgstr ""
+msgstr "Kokkujooksmise logid"
 
 #: ../qml/ConfigurationPage.qml:98
 msgid "Send anonymous crash reports"
-msgstr ""
+msgstr "Saada arendajale anonüümseid kokkujooksmise aruandeid"
 
 #: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
 msgid "Address Books"
-msgstr ""
+msgstr "Aadressiraamatud"
 
 #: ../qml/Main.qml:78 contactbridge.desktop.in.h:1
 msgid "Contact Bridge"
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../qml/ServerDetailsPage.qml:406
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: ../qml/ServerDetailsPage.qml:411
 msgid "Delete"
