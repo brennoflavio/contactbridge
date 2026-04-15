@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-14 16:09+0000\n"
+"PO-Revision-Date: 2026-04-16 16:54+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/et/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: ../qml/AddServerPage.qml:43
 msgid "Save"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../qml/Main.qml:100
 msgid "No servers configured"
-msgstr ""
+msgstr "Ühtegi serverit pole seadistatud"
 
 #: ../qml/Main.qml:118
 msgid "Sync Servers"
@@ -117,27 +117,27 @@ msgstr ""
 
 #: ../qml/Main.qml:132
 msgid "Unknown sync error"
-msgstr ""
+msgstr "Tundmatu viga sünkroonimisel"
 
 #: ../qml/Main.qml:174
 msgid "Syncing servers..."
-msgstr ""
+msgstr "Sünkroonin servereid…"
 
 #: ../qml/ServerDetailsPage.qml:37
 msgid "Invalid server ID"
-msgstr ""
+msgstr "Vigane serveri tunnus"
 
 #: ../qml/ServerDetailsPage.qml:48
 msgid "Failed to load server details"
-msgstr ""
+msgstr "Serveri üksikasjade laadimine ei õnnestunud"
 
 #: ../qml/ServerDetailsPage.qml:79 ../qml/ServerDetailsPage.qml:207
 msgid "Unknown Address Book"
-msgstr ""
+msgstr "Tundmatu aadressiraamat"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:216
 msgid "Last sync:"
-msgstr ""
+msgstr "Viimane sünkroonimine:"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
 msgid "Never"
@@ -189,27 +189,27 @@ msgstr "Eemalda server"
 
 #: ../qml/ServerDetailsPage.qml:180
 msgid "Sync Logs"
-msgstr ""
+msgstr "Sünkroonimislogid"
 
 #: ../qml/ServerDetailsPage.qml:281
 msgid "Show less"
-msgstr ""
+msgstr "Näita vähem"
 
 #: ../qml/ServerDetailsPage.qml:281
 msgid "Show more"
-msgstr ""
+msgstr "Näita rohkem"
 
 #: ../qml/ServerDetailsPage.qml:317
 msgid "Copy Logs"
-msgstr ""
+msgstr "Kopeeri logid"
 
 #: ../qml/ServerDetailsPage.qml:327
 msgid "No sync logs available"
-msgstr ""
+msgstr "Sünkroonimislogisid ei leidu"
 
 #: ../qml/ServerDetailsPage.qml:349
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Kopeeritud lõikelauale"
 
 #: ../qml/ServerDetailsPage.qml:373
 msgid "Loading server details..."
