@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-16 16:54+0000\n"
+"PO-Revision-Date: 2026-04-18 23:09+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/et/>\n"
@@ -57,7 +57,7 @@ msgstr "Ühendame serveriga…"
 
 #: ../qml/AddServerPage.qml:145
 msgid "Failed to obtain account access: %1"
-msgstr ""
+msgstr "Kasutajakontole ligipääsu tagamine ei õnnestunud: %1"
 
 #: ../qml/AddServerPage.qml:158
 msgid "Authentication error: %1"
@@ -73,11 +73,11 @@ msgstr "Seadistused"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
-msgstr ""
+msgstr "Uuendan taustal sünkroonimise seadistusi…"
 
 #: ../qml/ConfigurationPage.qml:60
 msgid "Failed to update background sync settings"
-msgstr ""
+msgstr "Taustal sünkroonimise seadistuste uuendamine ei õnnestunud"
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
@@ -105,7 +105,7 @@ msgstr "Aadressiraamatud"
 
 #: ../qml/Main.qml:78 contactbridge.desktop.in.h:1
 msgid "Contact Bridge"
-msgstr ""
+msgstr "Kontaktide ühendussild"
 
 #: ../qml/Main.qml:100
 msgid "No servers configured"
@@ -113,7 +113,7 @@ msgstr "Ühtegi serverit pole seadistatud"
 
 #: ../qml/Main.qml:118
 msgid "Sync Servers"
-msgstr ""
+msgstr "Sünkroonimisserverid"
 
 #: ../qml/Main.qml:132
 msgid "Unknown sync error"
@@ -213,19 +213,21 @@ msgstr "Kopeeritud lõikelauale"
 
 #: ../qml/ServerDetailsPage.qml:373
 msgid "Loading server details..."
-msgstr ""
+msgstr "Laadin serveri üksikasju…"
 
 #: ../qml/ServerDetailsPage.qml:378
 msgid "Updating address book..."
-msgstr ""
+msgstr "Uuendan aadressiraamatut…"
 
 #: ../qml/ServerDetailsPage.qml:383
 msgid "Deleting server..."
-msgstr ""
+msgstr "Kustutan serverit…"
 
 #: ../qml/ServerDetailsPage.qml:403
 msgid "This will remove the Addressbooks from your device. Are you sure?"
 msgstr ""
+"Sellega eemaldad need aadressiraamatud oma nutiseadmest. Kas oled selles "
+"kindel?"
 
 #: ../qml/ServerDetailsPage.qml:406
 msgid "Cancel"
@@ -233,15 +235,15 @@ msgstr "Katkesta"
 
 #: ../qml/ServerDetailsPage.qml:411
 msgid "Delete"
-msgstr ""
+msgstr "Kustuta"
 
 #: ../qml/ServerDetailsPage.qml:434
 msgid "Error loading server details"
-msgstr ""
+msgstr "Viga serveri üksikasjade laadimisel"
 
 #: ../qml/ServerDetailsPage.qml:441
 msgid "Server Details"
-msgstr ""
+msgstr "Serveri üksikasjad"
 
 #: ../qml/ut_components/ActionableList.qml:94
 #: ../qml/ut_components/CardList.qml:74
