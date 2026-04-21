@@ -8,50 +8,52 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-22 15:13+0000\n"
+"Last-Translator: Peter Broczinski <peter.broczinski@gmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/ubports/contact-"
+"bridge/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #: ../qml/AddServerPage.qml:43
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: ../qml/AddServerPage.qml:68
 msgid "Server URL"
-msgstr ""
+msgstr "Server URL"
 
 #: ../qml/AddServerPage.qml:69
 msgid "https://example.com/caldav"
-msgstr ""
+msgstr "https://example.com/caldav"
 
 #: ../qml/AddServerPage.qml:78
 msgid "Username"
-msgstr ""
+msgstr "Benutzername"
 
 #: ../qml/AddServerPage.qml:79
 msgid "Enter your username"
-msgstr ""
+msgstr "Geben Sie Ihren Benutzernamen ein"
 
 #: ../qml/AddServerPage.qml:87
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: ../qml/AddServerPage.qml:88
 msgid "Enter your password"
-msgstr ""
+msgstr "Geben Sie ihr Passwort ein"
 
 #: ../qml/AddServerPage.qml:118
 msgid "Import Account"
-msgstr ""
+msgstr "Importiere Account"
 
 #: ../qml/AddServerPage.qml:137
 msgid "Connecting to server..."
-msgstr ""
+msgstr "Verbinde mit Server..."
 
 #: ../qml/AddServerPage.qml:145
 msgid "Failed to obtain account access: %1"
@@ -59,15 +61,15 @@ msgstr ""
 
 #: ../qml/AddServerPage.qml:158
 msgid "Authentication error: %1"
-msgstr ""
+msgstr "Authentifizierungsfehler: %1"
 
 #: ../qml/AddServerPage.qml:188 ../qml/Main.qml:145
 msgid "Add Server"
-msgstr ""
+msgstr "Server hinzufügen"
 
 #: ../qml/ConfigurationPage.qml:28
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguration"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
@@ -79,15 +81,15 @@ msgstr ""
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
-msgstr ""
+msgstr "Allgemein"
 
 #: ../qml/ConfigurationPage.qml:87
 msgid "Background sync"
-msgstr ""
+msgstr "Hintergrund Sync"
 
 #: ../qml/ConfigurationPage.qml:88
 msgid "Install Systemd Timer for background updates"
-msgstr ""
+msgstr "Installiere Systemd Timer für Hintergrundupdates"
 
 #: ../qml/ConfigurationPage.qml:97
 msgid "Crash logs"
@@ -139,7 +141,7 @@ msgstr ""
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
 msgid "Never"
-msgstr ""
+msgstr "Nie"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:233
 msgid "Type:"
@@ -244,29 +246,29 @@ msgstr ""
 #: ../qml/ut_components/ActionableList.qml:94
 #: ../qml/ut_components/CardList.qml:74
 msgid "Search"
-msgstr ""
+msgstr "Suchen"
 
 #: ../qml/ut_components/ActionableList.qml:97
 #: ../qml/ut_components/CardList.qml:72
 msgid "No items"
-msgstr ""
+msgstr "Nichts ausgewählt"
 
 #: ../qml/ut_components/AppHeader.qml:81
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
-msgstr ""
+msgstr "Senden"
 
 #: ../qml/ut_components/InputField.qml:96
 msgid "Invalid input"
-msgstr ""
+msgstr "Fehlerhafte Eingabe"
 
 #: ../qml/ut_components/InputField.qml:169
 msgid "This field is required"
-msgstr ""
+msgstr "Dies ist eine Pflichteingabe"
