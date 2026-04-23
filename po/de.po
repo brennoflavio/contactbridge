@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-22 15:13+0000\n"
+"PO-Revision-Date: 2026-04-24 08:09+0000\n"
 "Last-Translator: Peter Broczinski <peter.broczinski@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/de/>\n"
@@ -57,7 +57,7 @@ msgstr "Verbinde mit Server..."
 
 #: ../qml/AddServerPage.qml:145
 msgid "Failed to obtain account access: %1"
-msgstr ""
+msgstr "Zugriff zum Account fehlgeschlagen: %1"
 
 #: ../qml/AddServerPage.qml:158
 msgid "Authentication error: %1"
@@ -73,11 +73,11 @@ msgstr "Konfiguration"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
-msgstr ""
+msgstr "Update der Einstellung für Hintergrundsync…"
 
 #: ../qml/ConfigurationPage.qml:60
 msgid "Failed to update background sync settings"
-msgstr ""
+msgstr "Fehler beim Update der Einstellung für Hintergrundsync"
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
@@ -85,7 +85,7 @@ msgstr "Allgemein"
 
 #: ../qml/ConfigurationPage.qml:87
 msgid "Background sync"
-msgstr "Hintergrund Sync"
+msgstr "Hintergrund Synchronisation"
 
 #: ../qml/ConfigurationPage.qml:88
 msgid "Install Systemd Timer for background updates"
@@ -93,51 +93,51 @@ msgstr "Installiere Systemd Timer für Hintergrundupdates"
 
 #: ../qml/ConfigurationPage.qml:97
 msgid "Crash logs"
-msgstr ""
+msgstr "Fehlerprotokoll"
 
 #: ../qml/ConfigurationPage.qml:98
 msgid "Send anonymous crash reports"
-msgstr ""
+msgstr "Sende anonyme Fehlerprotokolle"
 
 #: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
 msgid "Address Books"
-msgstr ""
+msgstr "Adressbücher"
 
 #: ../qml/Main.qml:78 contactbridge.desktop.in.h:1
 msgid "Contact Bridge"
-msgstr ""
+msgstr "Contact Bridge"
 
 #: ../qml/Main.qml:100
 msgid "No servers configured"
-msgstr ""
+msgstr "Keine Server konfiguriert"
 
 #: ../qml/Main.qml:118
 msgid "Sync Servers"
-msgstr ""
+msgstr "Synchronisiere Server"
 
 #: ../qml/Main.qml:132
 msgid "Unknown sync error"
-msgstr ""
+msgstr "Unbekannter Synchronisierungsfehler"
 
 #: ../qml/Main.qml:174
 msgid "Syncing servers..."
-msgstr ""
+msgstr "Synchronisiere Server…"
 
 #: ../qml/ServerDetailsPage.qml:37
 msgid "Invalid server ID"
-msgstr ""
+msgstr "Fehlerhafte Server ID"
 
 #: ../qml/ServerDetailsPage.qml:48
 msgid "Failed to load server details"
-msgstr ""
+msgstr "Serverdetails konnten nicht geladen werden"
 
 #: ../qml/ServerDetailsPage.qml:79 ../qml/ServerDetailsPage.qml:207
 msgid "Unknown Address Book"
-msgstr ""
+msgstr "Unbekanntes Adressbuch"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:216
 msgid "Last sync:"
-msgstr ""
+msgstr "Letzte Synchronisierung:"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
 msgid "Never"
@@ -145,103 +145,103 @@ msgstr "Nie"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:233
 msgid "Type:"
-msgstr ""
+msgstr "Typ:"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:239
 msgid "Unknown"
-msgstr ""
+msgstr "Unbekannt"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Failed"
-msgstr ""
+msgstr "Fehlgeschlagen"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:250
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Success"
-msgstr ""
+msgstr "Erfolgreich"
 
 #: ../qml/ServerDetailsPage.qml:84
 msgid "Message:"
-msgstr ""
+msgstr "Nachricht:"
 
 #: ../qml/ServerDetailsPage.qml:100
 msgid "Failed to delete server"
-msgstr ""
+msgstr "Server konnte nicht gelöscht werden"
 
 #: ../qml/ServerDetailsPage.qml:106
 msgid "No server ID provided"
-msgstr ""
+msgstr "Keine Server ID vorhanden"
 
 #: ../qml/ServerDetailsPage.qml:137
 msgid "Unnamed Address Book"
-msgstr ""
+msgstr "Unbenanntes Adressbuch"
 
 #: ../qml/ServerDetailsPage.qml:151
 msgid "No address books found"
-msgstr ""
+msgstr "Kein Adressbücher gefunden"
 
 #: ../qml/ServerDetailsPage.qml:166 ../qml/ServerDetailsPage.qml:402
 msgid "Delete Server"
-msgstr ""
+msgstr "Lösche Server"
 
 #: ../qml/ServerDetailsPage.qml:180
 msgid "Sync Logs"
-msgstr ""
+msgstr "Synchronisierungsprotokoll"
 
 #: ../qml/ServerDetailsPage.qml:281
 msgid "Show less"
-msgstr ""
+msgstr "Weniger anzeigen"
 
 #: ../qml/ServerDetailsPage.qml:281
 msgid "Show more"
-msgstr ""
+msgstr "Mehr anzeigen"
 
 #: ../qml/ServerDetailsPage.qml:317
 msgid "Copy Logs"
-msgstr ""
+msgstr "Kopiere Protokolle"
 
 #: ../qml/ServerDetailsPage.qml:327
 msgid "No sync logs available"
-msgstr ""
+msgstr "Keine Synchronisierungsprotokolle vorhanden"
 
 #: ../qml/ServerDetailsPage.qml:349
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "In die Zwischenablage kopiert"
 
 #: ../qml/ServerDetailsPage.qml:373
 msgid "Loading server details..."
-msgstr ""
+msgstr "Lade Serverdetails…"
 
 #: ../qml/ServerDetailsPage.qml:378
 msgid "Updating address book..."
-msgstr ""
+msgstr "Aktualisiere Adressbuch…"
 
 #: ../qml/ServerDetailsPage.qml:383
 msgid "Deleting server..."
-msgstr ""
+msgstr "Lösche Server…"
 
 #: ../qml/ServerDetailsPage.qml:403
 msgid "This will remove the Addressbooks from your device. Are you sure?"
-msgstr ""
+msgstr "Das Adressbuch wird vom Gerät gelöscht. Sind sie sicher?"
 
 #: ../qml/ServerDetailsPage.qml:406
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: ../qml/ServerDetailsPage.qml:411
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #: ../qml/ServerDetailsPage.qml:434
 msgid "Error loading server details"
-msgstr ""
+msgstr "Fehler beim Laden der Serverdetails"
 
 #: ../qml/ServerDetailsPage.qml:441
 msgid "Server Details"
-msgstr ""
+msgstr "Serverdetails"
 
 #: ../qml/ut_components/ActionableList.qml:94
 #: ../qml/ut_components/CardList.qml:74
