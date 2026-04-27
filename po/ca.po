@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-27 09:11+0000\n"
+"PO-Revision-Date: 2026-04-28 10:09+0000\n"
 "Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/ca/>\n"
@@ -45,7 +45,7 @@ msgstr "Contrasenya"
 
 #: ../qml/AddServerPage.qml:88
 msgid "Enter your password"
-msgstr "Entreu la vostra contrasenya"
+msgstr "Introduïu la vostra contrasenya"
 
 #: ../qml/AddServerPage.qml:118
 msgid "Import Account"
@@ -98,7 +98,7 @@ msgstr "Registres de fallades"
 
 #: ../qml/ConfigurationPage.qml:98
 msgid "Send anonymous crash reports"
-msgstr "Envia informes anònims de fallades"
+msgstr "Envia informes de fallades anònims"
 
 #: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
 msgid "Address Books"
@@ -254,7 +254,7 @@ msgstr "Cerca"
 #: ../qml/ut_components/ActionableList.qml:97
 #: ../qml/ut_components/CardList.qml:72
 msgid "No items"
-msgstr "Cap element"
+msgstr "Sense elements"
 
 #: ../qml/ut_components/AppHeader.qml:81
 msgid "Back"
@@ -262,7 +262,7 @@ msgstr "Enrere"
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
-msgstr "Paràmetres"
+msgstr "Configuració"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
@@ -274,4 +274,4 @@ msgstr "Entrada no vàlida"
 
 #: ../qml/ut_components/InputField.qml:169
 msgid "This field is required"
-msgstr "Es requereix aquest camp"
+msgstr "Aquest camp és obligatori"
