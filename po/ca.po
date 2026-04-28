@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-04-28 10:09+0000\n"
+"PO-Revision-Date: 2026-04-29 13:09+0000\n"
 "Last-Translator: Walter Garcia-Fontes <walter.garcia@upf.edu>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/ca/>\n"
@@ -69,7 +69,7 @@ msgstr "Afegeix un servidor"
 
 #: ../qml/ConfigurationPage.qml:28
 msgid "Configuration"
-msgstr "Configuració"
+msgstr "ubicació"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
