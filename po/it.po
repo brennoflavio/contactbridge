@@ -8,42 +8,44 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-07-21 16:01+0000\n"
+"Last-Translator: Sylke Vicious <silkevicious@tuta.io>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/ubports/contact-"
+"bridge/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 #: ../qml/AddServerPage.qml:43
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 #: ../qml/AddServerPage.qml:68
 msgid "Server URL"
-msgstr ""
+msgstr "URL Server"
 
 #: ../qml/AddServerPage.qml:69
 msgid "https://example.com/caldav"
-msgstr ""
+msgstr "https://example.com/caldav"
 
 #: ../qml/AddServerPage.qml:78
 msgid "Username"
-msgstr ""
+msgstr "Nome Utente"
 
 #: ../qml/AddServerPage.qml:79
 msgid "Enter your username"
-msgstr ""
+msgstr "Inserisci il tuo nome utente"
 
 #: ../qml/AddServerPage.qml:87
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: ../qml/AddServerPage.qml:88
 msgid "Enter your password"
-msgstr ""
+msgstr "Inserisci la tua password"
 
 #: ../qml/AddServerPage.qml:118
 msgid "Import Account"
@@ -63,11 +65,11 @@ msgstr ""
 
 #: ../qml/AddServerPage.qml:188 ../qml/Main.qml:145
 msgid "Add Server"
-msgstr ""
+msgstr "Aggiungi Server"
 
 #: ../qml/ConfigurationPage.qml:28
 msgid "Configuration"
-msgstr ""
+msgstr "Configurazione"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
@@ -79,7 +81,7 @@ msgstr ""
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
-msgstr ""
+msgstr "Generale"
 
 #: ../qml/ConfigurationPage.qml:87
 msgid "Background sync"
@@ -99,7 +101,7 @@ msgstr ""
 
 #: ../qml/Main.qml:54 ../qml/ServerDetailsPage.qml:130
 msgid "Address Books"
-msgstr ""
+msgstr "Rubriche"
 
 #: ../qml/Main.qml:78 contactbridge.desktop.in.h:1
 msgid "Contact Bridge"
@@ -135,11 +137,11 @@ msgstr ""
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:216
 msgid "Last sync:"
-msgstr ""
+msgstr "Ultima sincronizzazione:"
 
 #: ../qml/ServerDetailsPage.qml:80 ../qml/ServerDetailsPage.qml:222
 msgid "Never"
-msgstr ""
+msgstr "Mai"
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:233
 msgid "Type:"
@@ -147,23 +149,23 @@ msgstr ""
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:239
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Failed"
-msgstr ""
+msgstr "Fallito"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:250
 msgid "Status:"
-msgstr ""
+msgstr "Stato:"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Success"
-msgstr ""
+msgstr "Successo"
 
 #: ../qml/ServerDetailsPage.qml:84
 msgid "Message:"
-msgstr ""
+msgstr "Messaggio:"
 
 #: ../qml/ServerDetailsPage.qml:100
 msgid "Failed to delete server"
@@ -257,7 +259,7 @@ msgstr ""
 
 #: ../qml/ut_components/AppHeader.qml:97
 msgid "Settings"
-msgstr ""
+msgstr "Impostazioni"
 
 #: ../qml/ut_components/Form.qml:68
 msgid "Submit"
