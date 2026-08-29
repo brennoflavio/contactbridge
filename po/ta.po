@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-08-28 18:46+0000\n"
+"PO-Revision-Date: 2026-08-30 08:15+0000\n"
 "Last-Translator: Alagirisamy Rengaraj <radhaalagirisamy@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/ta/>\n"
@@ -21,63 +21,63 @@ msgstr ""
 
 #: ../qml/AddServerPage.qml:43
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: ../qml/AddServerPage.qml:68
 msgid "Server URL"
-msgstr ""
+msgstr "சேவையக முகவரி (யூஆர்எல்)"
 
 #: ../qml/AddServerPage.qml:69
 msgid "https://example.com/caldav"
-msgstr ""
+msgstr "https://மாதிரி.காம்/கால்டாவ்"
 
 #: ../qml/AddServerPage.qml:78
 msgid "Username"
-msgstr ""
+msgstr "பயனர் பெயர்"
 
 #: ../qml/AddServerPage.qml:79
 msgid "Enter your username"
-msgstr ""
+msgstr "உங்கள் பயனர் பெயர் ஐ உள்ளிடவும்"
 
 #: ../qml/AddServerPage.qml:87
 msgid "Password"
-msgstr ""
+msgstr "கடவுச்சொல்"
 
 #: ../qml/AddServerPage.qml:88
 msgid "Enter your password"
-msgstr ""
+msgstr "உங்கள் கடவுச்சொல்லை உள்ளிடவும்"
 
 #: ../qml/AddServerPage.qml:118
 msgid "Import Account"
-msgstr ""
+msgstr "கணக்கை பதிவிறக்கவும்"
 
 #: ../qml/AddServerPage.qml:137
 msgid "Connecting to server..."
-msgstr ""
+msgstr "சேவையகத்துடன் இணைக்கப்படுகிறது..."
 
 #: ../qml/AddServerPage.qml:145
 msgid "Failed to obtain account access: %1"
-msgstr ""
+msgstr "கணக்கு அணுகுதல் பெறுவது தோல்வியுற்றது:%1"
 
 #: ../qml/AddServerPage.qml:158
 msgid "Authentication error: %1"
-msgstr ""
+msgstr "உறுதிப்படுத்தல் பிழை:%1"
 
 #: ../qml/AddServerPage.qml:188 ../qml/Main.qml:145
 msgid "Add Server"
-msgstr ""
+msgstr "சேவையகம் சேர்க்கவும்"
 
 #: ../qml/ConfigurationPage.qml:28
 msgid "Configuration"
-msgstr ""
+msgstr "கட்டமைப்பு"
 
 #: ../qml/ConfigurationPage.qml:52
 msgid "Updating background sync settings..."
-msgstr ""
+msgstr "பின்புல ஒன்றிணைத்தல் அமைப்புக்களை மேம்படுத்துகிறது..."
 
 #: ../qml/ConfigurationPage.qml:60
 msgid "Failed to update background sync settings"
-msgstr ""
+msgstr "பின்புல ஒன்றிணைத்தல் அமைப்புக்களை மேம்படுத்தல் தோல்வியுற்றது"
 
 #: ../qml/ConfigurationPage.qml:84
 msgid "General"
@@ -233,7 +233,7 @@ msgstr "நிறுத்து"
 
 #: ../qml/ServerDetailsPage.qml:411
 msgid "Delete"
-msgstr ""
+msgstr "நீக்கு"
 
 #: ../qml/ServerDetailsPage.qml:434
 msgid "Error loading server details"
