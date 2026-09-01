@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: contactbridge.brennoflavio\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-29 17:56+0000\n"
-"PO-Revision-Date: 2026-08-31 09:54+0000\n"
+"PO-Revision-Date: 2026-09-01 16:57+0000\n"
 "Last-Translator: Alagirisamy Rengaraj <radhaalagirisamy@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/ubports/contact-"
 "bridge/ta/>\n"
@@ -149,7 +149,7 @@ msgstr ""
 
 #: ../qml/ServerDetailsPage.qml:81 ../qml/ServerDetailsPage.qml:239
 msgid "Unknown"
-msgstr ""
+msgstr "அறியாதது"
 
 #: ../qml/ServerDetailsPage.qml:82 ../qml/ServerDetailsPage.qml:256
 msgid "Failed"
